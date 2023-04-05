@@ -1,11 +1,13 @@
-import {useState} from 'react';
+import React, { useState } from 'react';
 import Card from '../../components/Card';
 import './styles.css';
 
 function Home() {
 
-  const [studentName, setStudentName] = useState('');
-  const [student, setStudent] = useState([]);
+  //! useState sempre precisa ser tipado com  " <StateProperties[]> "  no TypeScript
+
+  const [studentName, setStudentName] = useState<string>('');
+  const [student, setStudent] = useState<object[]>([]);
 
   function handleAddsStudent(){
     const newStudent = {
@@ -17,7 +19,7 @@ function Home() {
       })
     };
 
-    setStudent((prevState) => [...prevState, newStudent]);
+    setStudent(prevState => [...prevState, newStudent]);
   }
 
   return (
@@ -29,7 +31,13 @@ function Home() {
       <button type="button" onClick={handleAddsStudent}>Adicionar</button>
 
       {
-      student.map((student) => < Card name= {student.name} time={student.time} />)
+      student.map((student: any) => (
+        <Card 
+          key= {student.time}
+          name= {student.name} 
+          time={student.time} 
+        />
+      ))
       }
       
     </div>
