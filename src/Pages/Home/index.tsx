@@ -36,7 +36,7 @@ function Home() {
         </div>
       </header>
       <input type="text" 
-             placeholder="Digite seu nome..."
+             placeholder="No que você esta pensando?"
              onChange={e => setStudentName(e.target.value)}/>
       <button type="button" onClick={handleAddsStudent}>
         <i className="pi pi-plus-circle"></i>
