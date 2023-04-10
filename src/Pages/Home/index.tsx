@@ -23,28 +23,34 @@ function Home() {
       })
     };
 
+    //! adiciona um novo card sem remover o anterior 
+
     setStudent(prevState => [...prevState, newStudent]);
   }
 
   return (
     <div className='container'>
+      
       <header>
-        <h1>Home</h1>
+        <h1>Treinamento</h1>
         <div>
           <strong>Jopeskt</strong>
           <img src="https://pbs.twimg.com/profile_images/1522005855939485699/hn_l-crI_400x400.jpg" alt="Foto de Perfil" />
         </div>
       </header>
-      <input type="text" 
-             placeholder="No que você esta pensando?"
-             onChange={e => setStudentName(e.target.value)}/>
+
+      <input type="text" placeholder="No que você esta pensando?"
+             onChange={e => setStudentName(e.target.value)}
+      required/>
+
       <button type="button" onClick={handleAddsStudent}>
-        <i className="pi pi-plus-circle"></i>
-      Adicionar</button>
-      
+        <i className="pi pi-plus-circle"></i>Adicionar
+      </button>
+
+      //! adiciona novo card com keyprop 
 
       {
-      student.map((student: any) => (
+      student.slice().reverse().map((student: any) => (
         <Card 
           key= {student.time}
           post= {student.post} 
@@ -52,7 +58,7 @@ function Home() {
         />
       ))
       }
-      
+
     </div>
   )
 }
