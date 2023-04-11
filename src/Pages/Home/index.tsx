@@ -40,8 +40,8 @@ function Home() {
       </header>
 
       <input type="text" placeholder="No que você esta pensando?"
-             onChange={e => setStudentName(e.target.value)}
-      required/>
+             maxLength={200}
+             onChange={e => setStudentName(e.target.value)} required/>
 
       <button className='adcBtn' type="button" onClick={handleAddsStudent}>
         <i className="pi pi-plus-circle"></i>Publicar
