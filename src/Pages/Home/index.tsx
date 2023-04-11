@@ -43,8 +43,8 @@ function Home() {
              onChange={e => setStudentName(e.target.value)}
       required/>
 
-      <button type="button" onClick={handleAddsStudent}>
-        <i className="pi pi-plus-circle"></i>Adicionar
+      <button className='adcBtn' type="button" onClick={handleAddsStudent}>
+        <i className="pi pi-plus-circle"></i>Publicar
       </button>
 
       //! adiciona novo card com keyprop 

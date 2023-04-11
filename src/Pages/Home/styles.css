@@ -54,7 +54,7 @@
     font-size: 16px;
 }
 
-.container button {
+.adcBtn {
     width: 50%;
     padding: 24px;
     font-weight: 700;
@@ -72,11 +72,11 @@
     font-size: 16px;
 }
 
-.container button:hover {
+.adcBtn:hover {
     filter: brightness(0.9);
 }
 
-.container button i {
+.adcBtn i {
     font-size: 0.9rem;
     color: white;
 

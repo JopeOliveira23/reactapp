@@ -12,9 +12,9 @@ function Card(props: any) {
                 <p>{props.post}</p>
             </div>
             <div className='resources'>
-                <i className='pi pi-heart'></i>
-                <i className='pi pi-comments'></i>
-                <i className='pi pi-send'></i>
+                <a className='pi pi-heart'></a>
+                <a className='pi pi-comments'></a>
+                <a className='pi pi-send'></a>
             </div>               
         </div>
     )

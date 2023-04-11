@@ -58,11 +58,11 @@
     justify-content: space-between;
 }
 
-.resources i {
+.resources a {
     cursor: pointer;
 }
 
-.resources i:hover {
+.resources a:hover {
     filter: brightness(0.9);
     transform: scale(1.1);
 }
