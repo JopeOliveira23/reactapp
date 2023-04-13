@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card';
 import './styles.css';
 import 'primeicons/primeicons.css';
@@ -27,6 +27,10 @@ function Home() {
 
     setStudent(prevState => [...prevState, newStudent]);
   }
+
+  useEffect(() => {
+    console.log("useEffect ok");
+  }, [student]);
 
   return (
     <div className='container'>
