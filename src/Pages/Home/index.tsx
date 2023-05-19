@@ -9,7 +9,6 @@ function Home() {
   //  Foto  https://i1.sndcdn.com/avatars-6WiFZyYLhwBUJgpQ-GdBXzQ-t200x200.jpg
   
   //! useState sempre precisa ser tipado com  " <StateProperties[]> "  no TypeScript
-
   const [studentName, setStudentName] = useState<string>('');
   const [student, setStudent] = useState<object[]>([]);
 
@@ -24,7 +23,6 @@ function Home() {
     };
 
     //! adiciona um novo card sem remover o anterior 
-
     setStudent(prevState => [...prevState, newStudent]);
   }
 
@@ -52,7 +50,6 @@ function Home() {
       </button>
 
       //! adiciona novo card com keyprop 
-
       {
       student.slice().reverse().map((student: any) => (
         <Card 
